@@ -10,4 +10,16 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get appName => 'Dokan Demo';
+
+  @override
+  String get close => 'Close';
+
+  @override
+  String get camera => 'Camera';
+
+  @override
+  String get gallery => 'Gallery';
+
+  @override
+  String get file_size_to_large_please_select_another_file => 'File size too large, please select another file';
 }

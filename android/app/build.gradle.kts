@@ -8,7 +8,6 @@ plugins {
 android {
     namespace = "com.example.bloc_stucture_setup"
     compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

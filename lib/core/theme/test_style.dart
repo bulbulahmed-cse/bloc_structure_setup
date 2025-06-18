@@ -2,112 +2,55 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../main.dart';
-import 'app_colors.dart';
 
-TextStyle bodyTextStyleF14({BuildContext? context, Color? color}) {
-  return Theme.of(context??appContext).textTheme.bodyLarge!.copyWith(
-    fontSize: 14.sp,
-    fontWeight: FontWeight.normal,
-    color: color,
-  );
-}
-
-TextStyle bodyTextStyleF14_2({BuildContext? context, Color? color}) {
-  return Theme.of(context??appContext).textTheme.bodyMedium!.copyWith(
-    fontSize: 14.sp,
-    fontWeight: FontWeight.normal,
-    color: color,
-  );
-}
-TextStyle bodyTextStyleF12_2({BuildContext? context, Color? color}) {
-  return Theme.of(context??appContext).textTheme.bodyMedium!.copyWith(
-    fontSize: 12.sp,
-    fontWeight: FontWeight.normal,
-    color: color,
-  );
-}
-
-TextStyle disableTextStyle({BuildContext? context, Color? color,double? fontSize}) {
-  return Theme.of(context??appContext).textTheme.bodyMedium!.copyWith(
-    fontSize: fontSize??10.sp,
-    fontWeight: FontWeight.normal,
-    decoration: TextDecoration.lineThrough,
-    color: color,
-  );
-}
-
-TextStyle titleTextStyleF24({BuildContext? context, Color? color}) {
-  return Theme.of(context??appContext).textTheme.bodyLarge!.copyWith(
+TextStyle displayTextStyle({BuildContext? context, Color? color}) {
+  return Theme.of(context??appContext).textTheme.displayLarge!.copyWith(
     fontSize: 24.sp,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w600,
     color: color,
   );
 }
-
-TextStyle titleTextStyleF18({BuildContext? context, Color? color}) {
-  return Theme.of(context??appContext).textTheme.bodyLarge!.copyWith(
-    fontSize: 18.sp,
-    fontWeight: FontWeight.bold,
+TextStyle titleTextStyle({BuildContext? context, Color? color}) {
+  return Theme.of(context??appContext).textTheme.titleLarge!.copyWith(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w600,
     color: color,
   );
 }
-
-TextStyle titleTextStyleF14({BuildContext? context, Color? color}) {
+TextStyle bodyTextStyle({BuildContext? context, Color? color}) {
   return Theme.of(context??appContext).textTheme.bodyLarge!.copyWith(
     fontSize: 14.sp,
-    fontWeight: FontWeight.bold,
+    fontWeight: FontWeight.w500,
     color: color,
   );
 }
-TextStyle titleTextStyleF12({BuildContext? context, Color? color}) {
-  return Theme.of(context??appContext).textTheme.bodyLarge!.copyWith(
-    fontSize: 12.sp,
-    fontWeight: FontWeight.bold,
-    color: color,
-  );
-}
-TextStyle titleTextStyleF16({BuildContext? context, Color? color}) {
-  return Theme.of(context??appContext).textTheme.bodyLarge!.copyWith(
-    fontSize: 16.sp,
-    fontWeight: FontWeight.bold,
-    color: color,
-  );
-}
-
-TextStyle subtitleTextStyle({BuildContext? context,Color? color}) {
-  return Theme.of(context??appContext).textTheme.bodyLarge!.copyWith(
-    fontSize: 12.sp,
-    fontWeight: FontWeight.w600,
-    color: color,
-  );
-}
-
-TextStyle smallTextStyle({BuildContext? context, Color? color, FontWeight? fontWeight}) {
-  return Theme.of(context??appContext).textTheme.bodyLarge!.copyWith(
-    fontSize: 10.sp,
-    fontWeight: fontWeight??FontWeight.w600,
-    color: color,
-  );
-}
-TextStyle smallTextStyle2({BuildContext? context}) {
+TextStyle bodyTextStyleCG({BuildContext? context, Color? color}) {
   return Theme.of(context??appContext).textTheme.bodyMedium!.copyWith(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w500,
+    color: color,
+  );
+}
+TextStyle labelTextStyle({BuildContext? context, Color? color}) {
+  return Theme.of(context??appContext).textTheme.labelLarge!.copyWith(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+    color: color,
+  );
+}
+
+
+TextStyle labelBoldTextStyle({BuildContext? context, Color? color}) {
+  return Theme.of(context??appContext).textTheme.bodyLarge!.copyWith(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.bold,
+    color: color,
+  );
+}
+TextStyle smallTextStyle({BuildContext? context, Color? color}) {
+  return Theme.of(context??appContext).textTheme.labelSmall!.copyWith(
     fontSize: 10.sp,
-    fontWeight: FontWeight.w600,
-  );
-}
-
-TextStyle buttonTextStyle({BuildContext? context, Color? color, double? fontSize}) {
-  return Theme.of(context??appContext).textTheme.bodyLarge!.copyWith(
-    fontSize: fontSize??16.sp,
-    fontWeight: FontWeight.bold,
-    color: color ?? AppColors.white,
-  );
-}
-
-TextStyle buttonTextStyle2({BuildContext? context, Color? color}) {
-  return Theme.of(context??appContext).textTheme.bodyLarge!.copyWith(
-    fontSize: 16.sp,
-    fontWeight: FontWeight.bold,
-    color: color ?? AppColors.black,
+    fontWeight: FontWeight.w500,
+    color: color,
   );
 }

@@ -22,6 +22,10 @@ class SplashPage extends StatelessWidget {
 
     Widget _buildPage(BuildContext context) {
         final bloc = BlocProvider.of<SplashBloc>(context);
-        return Container();
+        return Scaffold(
+            body: Center(
+                child: Text("Welcome to the Splash Page!"),
+            ),
+        );
     }
 }

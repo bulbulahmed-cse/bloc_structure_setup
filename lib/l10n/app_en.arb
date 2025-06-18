@@ -1,3 +1,7 @@
 {
-  "appName": "Dokan Demo"
+  "appName": "Dokan Demo",
+  "close": "Close",
+  "camera": "Camera",
+  "gallery": "Gallery",
+  "file_size_to_large_please_select_another_file": "File size too large, please select another file"
 }

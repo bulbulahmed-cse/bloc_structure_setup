@@ -36,6 +36,4 @@ class AppColors {
   static const Color gray100 = Color(0xFFF1F5F9);
   static const Color gray200 = Color(0xFFE2E8F0);
   static const Color dividerColor = Color(0xFFE2E8F0);
-
-  static const Color homeSectionColor = Color.fromRGBO(5, 17, 148, 0.12);
 }

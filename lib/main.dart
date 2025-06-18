@@ -1,3 +1,4 @@
+import 'package:bloc_structure_setup/app_controller_event.dart';
 import 'package:bloc_structure_setup/app_controller_state.dart';
 import 'package:bloc_structure_setup/routes/route_helper.dart';
 import 'package:flutter/material.dart';
@@ -34,7 +35,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MultiBlocProvider(
-      providers: [],
+      providers: [
+        BlocProvider<AppControllerBloc>(
+          create: (context) => AppControllerBloc()..add(InitAppEvent()),
+        ),
+
+      ],
       child: BlocBuilder<AppControllerBloc, AppControllerState>(
         builder: (context, state) {
           return ScreenUtilInit(
