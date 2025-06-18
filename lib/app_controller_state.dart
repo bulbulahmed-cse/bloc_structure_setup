@@ -26,7 +26,6 @@ class AppControllerState {
   Future<AppControllerState> inti() async {
 
     locale = Locale(await instance<StorageService>().getLanguage());
-    print('AppControllerState.inti $locale');
    return this;
   }
 

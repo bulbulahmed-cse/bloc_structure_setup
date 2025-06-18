@@ -5,7 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '../core/theme/app_colors.dart';
 import '../main.dart';
 
-errorMessage({
+Future<Null> errorMessage({
   String? message,
   String? title,
   String? action,
@@ -13,12 +13,12 @@ errorMessage({
   bool? isDismissible,
   Function? then,
 }) {
-  if (message == null) return;
+  if (message == null) return Future.value(null);
   return Flushbar(
     margin: EdgeInsets.symmetric(horizontal: 18.w),
     borderRadius: BorderRadius.circular(10.r),
     messageText: Text(
-      message ?? "",
+      message,
       style: appTheme().textTheme.bodySmall,
       maxLines: 2,
       overflow: TextOverflow.ellipsis,
@@ -37,7 +37,7 @@ errorMessage({
   });
 }
 
-successMessage({
+Future<Null> successMessage({
   String? message,
   String? title,
   String? action,
@@ -46,12 +46,12 @@ successMessage({
   Function? then,
   IconData? icon,
 }) {
-  if (message == null) return;
+  if (message == null) return Future.value(null);
   return Flushbar(
     margin: EdgeInsets.symmetric(horizontal: 18.w),
     borderRadius: BorderRadius.circular(10.r),
     messageText: Text(
-      message ?? "",
+      message ,
       style: appTheme().textTheme.bodySmall,
       maxLines: 2,
       overflow: TextOverflow.ellipsis,

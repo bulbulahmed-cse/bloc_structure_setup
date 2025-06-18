@@ -4,7 +4,7 @@ abstract class AppException implements Exception {
 }
 
 class NetworkException extends AppException {
-  const NetworkException(String message) : super(message);
+  const NetworkException(super.message);
 }
 
 class ServerException extends AppException {
@@ -13,9 +13,9 @@ class ServerException extends AppException {
 }
 
 class CancelledException extends AppException {
-  const CancelledException(String message) : super(message);
+  const CancelledException(super.message);
 }
 
 class UnknownException extends AppException {
-  const UnknownException(String message) : super(message);
+  const UnknownException(super.message);
 }

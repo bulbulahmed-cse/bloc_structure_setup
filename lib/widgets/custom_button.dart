@@ -1,3 +1,4 @@
+import 'package:bloc_structure_setup/core/extension/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -75,7 +76,7 @@ class _CustomButtonState extends State<CustomButton> {
                         }
                       : null,
                   style: ElevatedButton.styleFrom(
-                    shadowColor: AppColors.primary.withOpacity(.5),
+                    shadowColor: AppColors.primary.withOpacityFraction(.5),
                     elevation: 0,
                     backgroundColor: widget.enable
                         ? (widget.color ??
@@ -84,8 +85,8 @@ class _CustomButtonState extends State<CustomButton> {
                                 : widget.isSecondary ?? false
                                     ? AppColors.primary50P
                                     : AppColors.primary))
-                        : AppColors.primary.withOpacity(0.08),
-                    disabledBackgroundColor: !widget.enable ? AppColors.primary.withOpacity(0.08) : AppColors.disable,
+                        : AppColors.primary.withOpacityFraction(0.08),
+                    disabledBackgroundColor: !widget.enable ? AppColors.primary.withOpacityFraction(0.08) : AppColors.disable,
                     side: widget.onlyBorder ?? false
                         ? BorderSide(color: widget.broderColor ?? AppColors.primary, width: 1)
                         : BorderSide.none,

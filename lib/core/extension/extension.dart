@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:ui';
 
 import 'package:intl/intl.dart';
 
@@ -99,5 +100,11 @@ extension DoubleExtensions on num? {
       result = str.substring(0, endIndex + 1);
     }
     return "$iValue.$result";
+  }
+}
+
+extension ColorOpacityExtension on Color {
+  Color withOpacityFraction(double opacity) {
+    return withAlpha((opacity * 255).round().clamp(0, 255));
   }
 }

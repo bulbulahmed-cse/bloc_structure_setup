@@ -1,9 +1,10 @@
+import 'package:bloc_structure_setup/core/extension/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'app_colors.dart';
 
-darkTheme() {
+ThemeData darkTheme() {
   return ThemeData.dark().copyWith(
     colorScheme: const ColorScheme.light(
       primary: AppColors.primary,
@@ -11,7 +12,9 @@ darkTheme() {
       surface: AppColors.backgroundDark,
       error: AppColors.error,
     ),
-    dialogBackgroundColor: AppColors.backgroundDark,
+    dialogTheme: DialogThemeData(
+      backgroundColor: AppColors.backgroundDark
+    ),
     datePickerTheme: const DatePickerThemeData(
       backgroundColor: AppColors.backgroundDark,
       surfaceTintColor: AppColors.backgroundDark,
@@ -40,7 +43,7 @@ darkTheme() {
     ),
     snackBarTheme: SnackBarThemeData(
       actionTextColor: AppColors.primary, // Customize the "OK" button text color
-      backgroundColor: AppColors.primary.withOpacity(.7),
+      backgroundColor: AppColors.primary.withOpacityFraction(.7),
       contentTextStyle: TextStyle(
         color: AppColors.textDark,
         fontSize: 24.sp,
@@ -60,7 +63,7 @@ darkTheme() {
       elevation: 0,
       color: Colors.transparent,
       surfaceTintColor: Colors.transparent,
-      shadowColor: AppColors.backgroundDark.withOpacity(.3),
+      shadowColor: AppColors.backgroundDark.withOpacityFraction(.3),
       centerTitle: false,
       iconTheme: const IconThemeData(color: AppColors.textDark),
       titleTextStyle:  TextStyle(
@@ -105,7 +108,7 @@ darkTheme() {
     ),
     inputDecorationTheme: InputDecorationTheme(
       filled: true,
-      fillColor: AppColors.primary.withOpacity(.3),
+      fillColor: AppColors.primary.withOpacityFraction(.3),
       hintStyle: TextStyle(
         color: AppColors.hintColor,
         fontSize: 14.sp,
@@ -116,7 +119,7 @@ darkTheme() {
     ),
     cardColor: AppColors.cardColorDark,
     cardTheme: CardThemeData(
-      shadowColor: AppColors.cardColorDark.withOpacity(0.8),
+      shadowColor: AppColors.cardColorDark.withOpacityFraction(0.8),
       color: AppColors.cardColorDark,
       surfaceTintColor: AppColors.cardColorDark,
       shape: RoundedRectangleBorder(
@@ -220,3 +223,5 @@ darkTheme() {
     ),
   );
 }
+
+

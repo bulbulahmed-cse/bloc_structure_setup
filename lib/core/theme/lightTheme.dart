@@ -1,3 +1,4 @@
+import 'package:bloc_structure_setup/core/extension/extension.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -5,7 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 import 'app_colors.dart';
 
-lightTheme() {
+ThemeData lightTheme() {
   return ThemeData.light().copyWith(
     colorScheme: const ColorScheme.light(
       primary: AppColors.primary,
@@ -13,7 +14,9 @@ lightTheme() {
       surface: AppColors.backgroundLight,
       error: AppColors.error,
     ),
-    dialogBackgroundColor: AppColors.backgroundLight,
+    dialogTheme: DialogThemeData(
+        backgroundColor: AppColors.backgroundLight
+    ),
     datePickerTheme: const DatePickerThemeData(
       backgroundColor: AppColors.backgroundLight,
       surfaceTintColor: AppColors.backgroundLight,
@@ -42,7 +45,7 @@ lightTheme() {
     ),
     snackBarTheme: SnackBarThemeData(
       actionTextColor: AppColors.primary, // Customize the "OK" button text color
-      backgroundColor: AppColors.primary.withOpacity(.7),
+      backgroundColor: AppColors.primary.withOpacityFraction(.7),
       contentTextStyle: GoogleFonts.plusJakartaSans(
         color: AppColors.textLight,
         fontSize: 24.sp,
@@ -61,7 +64,7 @@ lightTheme() {
       elevation: 0,
       color: Colors.transparent,
       surfaceTintColor: Colors.transparent,
-      shadowColor: AppColors.backgroundLight.withOpacity(.3),
+      shadowColor: AppColors.backgroundLight.withOpacityFraction(.3),
       centerTitle: true,
       iconTheme: const IconThemeData(color: AppColors.textLight),
       titleTextStyle: GoogleFonts.plusJakartaSans(
@@ -163,7 +166,7 @@ lightTheme() {
     ),
     cardColor: AppColors.cardColorLight,
     cardTheme: CardThemeData(
-      shadowColor: AppColors.cardColorLight.withOpacity(0.8),
+      shadowColor: AppColors.cardColorLight.withOpacityFraction(0.8),
       color: AppColors.cardColorLight,
       surfaceTintColor: AppColors.cardColorLight,
       shape: RoundedRectangleBorder(

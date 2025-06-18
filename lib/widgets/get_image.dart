@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:bloc_structure_setup/core/extension/extension.dart';
 import 'package:bloc_structure_setup/widgets/show_dialog.dart';
 import 'package:bloc_structure_setup/widgets/show_message.dart';
 import 'package:flutter/cupertino.dart';
@@ -13,7 +14,7 @@ import '../core/theme/app_colors.dart';
 
 Future<List<File>> getImage({bool isMultiple = false, bool? onlyGallery = false,bool? onlyCamera = false,bool? frontCamera = false,double? height,double? width}) async {
   var source = await showCupertinoModalPopup(
-    barrierColor: AppColors.gray.withOpacity(.65),
+    barrierColor: AppColors.gray.withOpacityFraction(.65),
     context: appContext,
     builder: (BuildContext context) => CupertinoActionSheet(
       actions: <Widget>[
